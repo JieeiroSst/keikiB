@@ -6,6 +6,20 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var aboutRouter = require('./routes/about');
+var careRouter = require('./routes/care');
+var codesRouter = require('./routes/codes');
+var contactRouter = require('./routes/contact');
+var faqsRouter = require('./routes/faqs');
+var holdRouter = require('./routes/hold');
+var kitchenRouter = require('./routes/kitchen');
+var loginRouter = require('./routes/login');
+var offerRouter = require('./routes/offer');
+var registerRouter = require('./routes/register');
+var shippingRouter = require('./routes/shipping');
+var singleRouter = require('./routes/single');
+var termsRouter = require('./routes/terms');
+var wishlistRouter = require('./routes/wishlist');
 
 var app = express();
 
@@ -21,6 +35,21 @@ app.use(express.static(path.join(__dirname, './public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/', aboutRouter);
+app.use('/', careRouter);
+app.use('/', codesRouter);
+app.use('/', contactRouter);
+app.use('/', faqsRouter);
+app.use('/', holdRouter);
+app.use('/', kitchenRouter);
+app.use('/', loginRouter);
+app.use('/', offerRouter);
+app.use('/', registerRouter);
+app.use('/', shippingRouter);
+app.use('/', singleRouter);
+app.use('/', termsRouter);
+app.use('/', wishlistRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
